@@ -91,11 +91,30 @@ header.sub {
 /*//////////////////////// Body Part Styles /////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////*/
 
+@font-face {
+	font-family: 'faktpro-blond';
+	src: url('fonts/faktpro-blond.eot');
+	src: url('fonts/faktpro-blond.eot') format('embedded-opentype'),
+				 url('fonts/faktpro-blond.ttf') format('truetype'),
+				 url('fonts/faktpro-blond.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'faktpro-semibold';
+	src: url('fonts/faktpro-semibold.eot');
+	src: url('fonts/faktpro-semibold.eot') format('embedded-opentype'),
+				 url('fonts/faktpro-semibold.ttf') format('truetype'),
+				 url('fonts/faktpro-semibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 body {
 	font-size: 16px;
 	letter-spacing: .025em;
-	font-family: "proxima nova", serif;
+	font-family: "faktpro-blond", sans-serif;
 	color: #3e3e3f;
 	margin: 0;
 }
@@ -117,7 +136,7 @@ header {
 }
 
 a.active {
-	font-weight: bold;
+	font-family: "faktpro-semibold", sans-serif;
 }
 
 section a {

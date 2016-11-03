@@ -1,14 +1,68 @@
-<?php
-	// Edit these Variables to change the page header information
-	$title = 'MIT Alumni Association Website Guidelines &amp; Documentation';
-	$credit='Presented by Moth Design';
-	$description='This archive contains documentation, prototypes, and links to static designs for the MITAA website.';
-?>
-<?php include'inc/head.php'; // Renders the head of the document. ?>
-<body>
-	<?php include'inc/header.php'; //<main> start tag is inside this element ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="http://www.mothdesign.net/images/favicon.ico">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script>
+		$(document).ready(function () {
+		    $(document).on("scroll", onScroll);
+    
+		    //smoothscroll
+		    $('a[href^="#"]').on('click', function (e) {
+		        e.preventDefault();
+		        $(document).off("scroll");
+        
+		        $('a').each(function () {
+		            $(this).removeClass('active');
+		        })
+		        $(this).addClass('active');
+      
+		        var target = this.hash,
+		            menu = target;
+		        $target = $(target);
+		        $('html, body').stop().animate({
+		            'scrollTop': $target.offset().top - 40
+		        }, 500, 'swing', function () {
+		            window.location.hash = target;
+		            $(document).on("scroll", onScroll);
+		        });
+		    });
+		});
+
+		function onScroll(event){
+		    var scrollPos = $(document).scrollTop();
+		    $('.page-nav .contents a').each(function () {
+		        var currLink = $(this);
+		        var refElement = $(currLink.attr("href"));
+		        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+		            $('.page-nav .contents li a').removeClass("active");
+		            currLink.addClass("active");
+		        }
+		        else{
+		            currLink.removeClass("active");
+		        }
+		    });
+		}
+	</script>
+</head><body>
+	<body>
+		
+	<header class="sub">
+		<a href="./" class="moth-logo"></a>
+		<span class="title">MIT Alumni Association Website Guidelines &amp; Documentation</span>		<span class="date">Aug. 23, 2016</date>
+	</header>
+	<main>
+		<header>
+			<h1>MIT Alumni Association Website Guidelines &amp; Documentation</h1>			<h5>Presented by Moth Design</h5>			<small>This archive contains documentation, prototypes, and links to static designs for the MITAA website.</small>		</header>		
 		<aside class="page-nav">
-			<h4>Table of Contents</h4>
+			<h4>Table of class</h4>
+			<!--#echo var="DATE_LOCAL" -->
 			<ol class="contents">
 				<li><a href="#specs">Specs &amp; Documentation</a></li>
 				<li><a href="#prototypes">Prototypes</a></li>
@@ -47,16 +101,16 @@
 					<h6>Wireframes</h6>
 					<ul>
 						<li class="final">
-							<a href="mit-alumni-ux-FINAL.pdf">Alumni Website</a>
+							<a href="documents/mit-alumni-ux-FINAL.pdf">Alumni Website</a>
 							<small>08.18.16 - Added Change Log, Marked as Final</small>
 							<small>10.27.16 - Updated sitemap.  Updated Change Log</small>
 						</li>
 						<li class="final">
-							<a href="alumni-directory-ux-FINAL.pdf">Alumni Directory</a>
+							<a href="documents/alumni-directory-ux-FINAL.pdf">Alumni Directory</a>
 							<small>08.18.16 - Marked as Final</small>
 						</li>
 						<li class="final">
-							<a href="mit-alumni-account-FINAL.pdf">My Account</a>
+							<a href="documents/mit-alumni-account-FINAL.pdf">My Account</a>
 							<small>08.18.16 - Marked as Final</small>
 						</li>
 					</ul>
@@ -81,9 +135,9 @@
 				<li>
 					<h6>Specifications</h6>
 					<ul>
-						<!--li class="new"><a href="content-authoring">Content Authoring Guidelines &amp; Best Practices</a></li-->
+						<li class="new"><a href="content-authoring">Content Authoring Guidelines &amp; Best Practices</a></li>
 						<li><a href="https://docs.google.com/spreadsheets/d/15LvjU2K0RRbYFkzF1HTAZmCgO-jEf4wMJcmBoMNTRYE/edit?usp=sharing">Copy Specifications (Google Sheets)</a></li>
-						<li><a href="MITAA_Photo-Guide_FINAL.pdf">Photography &amp; Image Specifications</a></li>
+						<li><a href="documents/MITAA_Photo-Guide_FINAL.pdf">Photography &amp; Image Specifications</a></li>
 						<li class="revised">
 							<a href="https://invis.io/GV87NKZSY">Copy Specifications Visual Guide</a>
 							<small>08.18.16 - Added Templates: B,G,H,J,K,L,M,Q</small>
@@ -369,4 +423,13 @@
 				<li><a href="https://invis.io/F48ASHTJD#/181702149_Hold_My_Spot"><span class="letter">J</span>Travel: Hold my Spot</a></li>
 			</ol>
 		</section>
-<?php include'inc/footer.php'; //</main> close tag is inside this element ?>
+	</main>
+<script src="lightbox-plus-jquery.min.js"></script>
+<script>
+lightbox.option({
+     'resizeDuration': 700,
+     'fitImagesInViewport': false,
+   })
+</script>
+</body>
+</html>
