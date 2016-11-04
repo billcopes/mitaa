@@ -563,22 +563,25 @@ section div a.img-link:after  {
 }
 .dont a.img-link img { border: solid 2px #df286d; }
 
-a.download {
+a.button {
 	border: solid 1px #0077d2;
 	padding: 1em;
-	margin: 0;
+	margin: 1em 0;
 	display: inline-block;
 }
-a.download:after {
+a.button:after {
 	content: "\21E5";
 	font-family: arial, sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	display: inline-block;
 	margin: .1em .1em 0 1em;
+}
+
+a.download:after {
 	transform: rotate(90deg);
 }
-a.download:hover {
+a.button:hover {
 	background: #33a7ff;
 	color: #fff;
 }
@@ -594,7 +597,7 @@ a.download:hover {
 	bottom: 0;
 	right: 0;
 	z-index: 100;
-	padding: 1em;
+	leading: 1em;
 	text-align: center;
 	
 }
