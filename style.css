@@ -130,10 +130,6 @@ a:hover {
 	/*text-decoration: underline;*/
 	color: #33a7ff;
 }
-header {
-	padding: 0 1em;
-	text-align: left;
-}
 
 a.active {
 	font-family: "faktpro-semibold", sans-serif;
@@ -143,6 +139,14 @@ section a {
 	display: inline;
 }
 	
+
+header {
+	padding: 0 1em;
+	text-align: left;
+}
+header h1 {
+	max-width: 1000px;
+}
 
 main { padding: 2em 2em 8em;}
 section {
