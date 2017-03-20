@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MITAA - Sticky Navigation Demo</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="http://www.mothdesign.net/images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <article>
+		<header class="header">
+			<div class="navigation">
+				<div class="top">
+					<a href="#" class="menu">Menu</a>
+					<a href="#" class="share">Share</a>
+					<a href="#" class="search">Search</a>
+				</div>
+			</div>
+		</header>
+	</article>
+  </body>
+  <script>
+  $(document).ready(function() {
+  	var stickyNavTop = $('.header').offset().top + 120;
+  	var stickyNav = function() {
+  		var scrollTop = $(window).scrollTop();
+  		if (scrollTop > stickyNavTop) {
+  			$('.header').addClass('sticky');
+  		} else {
+  			$('.header').removeClass('sticky');
+  		}
+  	};
+  	stickyNav();
+  	$(window).scroll(function() {
+  		stickyNav();
+  	});
+  });
+ </script>
+</html>
