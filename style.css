@@ -298,6 +298,14 @@ span.letter {
 span.letter.optional {
 	background: #6ebe44;
 }
+span.letter.yellow {background: #CCCC00;}
+span.letter.orange {background: #DD8F29;}
+span.letter.violet {background: #CAADD4;}
+span.letter.red {background: #D51E21;}
+span.letter.green {background: #32AF42;}
+span.letter.magenta {background: #F12C8B;}
+span.letter.purple {background: #223886;}
+
 /* Column Break */
 .break {
 	-webkit-column-break-before: always;
@@ -450,7 +458,7 @@ p, .intro p, .intro ul {
 	margin: 0 0 1em;
 }
 section p { max-width: 80%; }
-
+.content-authoring img { margin: 0 0 1em;}
 strong { font-weight: 700;}
 section > div {
 	margin: 3em 0;
