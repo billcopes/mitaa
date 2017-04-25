@@ -46,6 +46,15 @@
 		    });
 		}
 	</script>
+	<script>
+	    $(document).ready(function(){
+
+			 $('details').click(function (event) {
+			     $('details').not(this).setAttribute("open");  
+			     });
+			 
+	    });
+	</script>
 </head>
 <body>
 	<header class="sub">
@@ -96,6 +105,7 @@
 				<p><span class="letter">•</span> Required</p>
 			</section>
 			<h3><a href="index.html">MITAA Website Guidelines &amp; Documentation</a></h3>
+			<a href="#" class="info">++</a>
 		</aside>
 		<!--number1-->
 		<section id="purpose">
@@ -135,45 +145,65 @@
 							</details>
 						</li>
 						<li>
-							<h4><span class="letter">C</span>Story Metadata</h4>
-							<p>Metadata is a short set of information that describes a story's attributes. Meta information includes a story's <em>author</em>, the source <em>url</em> of the story, its <em>media type</em>, and the <em>date</em> it was published.</p>
+							<details>
+								<summary><h4><span class="letter">C</span>Story Metadata</h4></summary>
+								<p>Metadata is a short set of information that describes a story's attributes. Meta information includes a story's <em>author</em>, the source <em>url</em> of the story, its <em>media type</em>, and the <em>date</em> it was published.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">D</span>Topic/Category Tags</h4>
-							<p>Topic tags display the topic(s) or categorie(s) that a story is associated with and help define the context of where a story is located. Clicking on a topic tag will generate a landing page with stories related to that topic.</p>
+							<details>
+								<summary><h4><span class="letter">D</span>Topic/Category Tags</h4></summary>
+								<p>Topic tags display the topic(s) or categorie(s) that a story is associated with and help define the context of where a story is located. Clicking on a topic tag will generate a landing page with stories related to that topic.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">E</span>Story Body Content</h4>
-							<p>This is the main body content of a story, featuring paragraphs and different inset content types. Character counts for story body content can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide</a>.</p>
+							<details>
+								<summary><h4><span class="letter">E</span>Story Body Content</h4></summary>
+								<p>This is the main body content of a story, featuring paragraphs and different inset content types. Character counts for story body content can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide</a>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">F</span>Media Carousel</h4>
-							<p>Media carousels allow authors to include several pieces of media into a story page. Carousels have the ability to hold photos, videos and sound files. A media carousel can be utilized as a visual interruptor when authoring a story.</p>
+							<details>
+								<summary><h4><span class="letter optional">F</span>Media Carousel</h4></summary>
+								<p>Media carousels allow authors to include several pieces of media into a story page. Carousels have the ability to hold photos, videos and sound files. A media carousel can be utilized as a visual interruptor when authoring a story.</p>
+							</details>
 						</li>
 						<li class="break">
-							<h4><span class="letter optional">G</span>Inset Quote</h4>
-							<p>An inset quote is a featured text fragment used to emphasise a particular sentence or message within a story. Inset quotes can be utilized as visual interruptors when authoring a story. Character counts for inset quotes can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide.</a></p>
+							<details>
+								<summary><h4><span class="letter optional">G</span>Inset Quote</h4></summary>
+								<p>An inset quote is a featured text fragment used to emphasise a particular sentence or message within a story. Inset quotes can be utilized as visual interruptors when authoring a story. Character counts for inset quotes can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide.</a></p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">H</span>Factoid</h4>
-							<p>A factoid is a highlighted portion of content that emphasizes a particular fact in a story. Factoids can be utilized as visual interruptors when authoring a story.</p>
+							<details>
+								<summary><h4><span class="letter optional">H</span>Factoid</h4></summary>
+								<p>A factoid is a highlighted portion of content that emphasizes a particular fact in a story. Factoids can be utilized as visual interruptors when authoring a story.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">I</span>Inset Image</h4>
-							<p>An inset image can be utilized as a visual interruptor when authoring a story, and are sometimes associated with a quote or factoid. Information on how to select photos can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>. Character counts for inset image captions can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide.</a>
-							</p>
+							<details>
+								<summary><h4><span class="letter optional">I</span>Inset Image</h4></summary>
+								<p>An inset image can be utilized as a visual interruptor when authoring a story, and are sometimes associated with a quote or factoid. Information on how to select photos can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>. Character counts for inset image captions can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide.</a>
+								</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">J</span>Next Up Stories</h4>
-							<p>Next Up stories are automatically generated by the system. They feature the main photo, headline, and metadata for each story.</p>
+							<details>
+								<summary><h4><span class="letter">J</span>Next Up Stories</h4></summary>
+								<p>Next Up stories are automatically generated by the system. They feature the main photo, headline, and metadata for each story.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">K</span>Media Flag</h4>
-							<p>Media flags denote the type of media content that is associated with a story. Each flag is automatically generated based on the media type.</p>
+							<details>
+								<summary><h4><span class="letter">K</span>Media Flag</h4></summary>
+								<p>Media flags denote the type of media content that is associated with a story. Each flag is automatically generated based on the media type.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">L</span>Related / Recommended Stories</h4>
-							<p>Related stories are generated by the system via categories and tags, or they can be directly currated by authors.</p>
+							<details>
+								<summary><h4><span class="letter">L</span>Related / Recommended Stories</h4></summary>
+								<p>Related stories are generated by the system via categories and tags, or they can be directly currated by authors.</p>
+							</details>
 						</li>
 					</ul>
 				</div>
@@ -216,36 +246,52 @@
 		<div class="split">
 			<ul>
 				<li>
-					<h4><span class="letter">A</span>Main Story Photo</h4>
-					<p>This is the main visual representation of a story and will be featured in any context where a story's primary photo is needed, such as in an article list. Information on how to select a photo can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">A</span>Main Story Photo</h4></summary>
+						<p>This is the main visual representation of a story and will be featured in any context where a story's primary photo is needed, such as in an article list. Information on how to select a photo can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">B</span>Story Headline</h4>
-					<p>This is the primary heading of a story and will be featured in any context where a story's heading is needed, such as on a category page. Headline placements and character counts can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">B</span>Story Headline</h4></summary>
+						<p>This is the primary heading of a story and will be featured in any context where a story's heading is needed, such as on a category page. Headline placements and character counts can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide</a>.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">C</span>Story Metadata</h4>
-					<p>Metadata is a short set of information that describes a story's attributes. Meta information includes a story's <em>author</em>, the source <em>url</em> of the story, its <em>media type</em>, and the <em>date</em> it was published.</p>
+					<details>
+						<summary><h4><span class="letter">C</span>Story Metadata</h4></summary>
+						<p>Metadata is a short set of information that describes a story's attributes. Meta information includes a story's <em>author</em>, the source <em>url</em> of the story, its <em>media type</em>, and the <em>date</em> it was published.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">D</span>Topic/Category Tags</h4>
-					<p>Topic tags display the topic(s) or categorie(s) that a story is associated with and help define the context of where a story is located. Clicking on a topic tag will generate a landing page with stories related to that topic.</p>
+					<details>
+						<summary><h4><span class="letter">D</span>Topic/Category Tags</h4></summary>
+						<p>Topic tags display the topic(s) or categorie(s) that a story is associated with and help define the context of where a story is located. Clicking on a topic tag will generate a landing page with stories related to that topic.</p>
+					</details>
 				</li>
 				<li class="break">
-					<h4><span class="letter">E</span>Story Body Content</h4>
-					<p>This is the main body content of a story, featuring paragraphs and different inset content types. Character counts for story body content can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">E</span>Story Body Content</h4></summary>
+						<p>This is the main body content of a story, featuring paragraphs and different inset content types. Character counts for story body content can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide</a>.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter optional">F</span>Inset Quote</h4>
-					<p>An inset quote is a featured text fragment used to emphasise a particular sentence or message within a story. Inset quotes can be utilized as visual interruptors when authoring a story. Character counts for inset quotes can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide.</a></p>
+					<details>
+						<summary><h4><span class="letter optional">F</span>Inset Quote</h4></summary>
+						<p>An inset quote is a featured text fragment used to emphasise a particular sentence or message within a story. Inset quotes can be utilized as visual interruptors when authoring a story. Character counts for inset quotes can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide.</a></p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">G</span>Next Up Stories</h4>
-					<p>Next Up stories are automatically generated by the system. They feature the main photo, headline, and metadata for each story.</p>
+					<details>
+						<summary><h4><span class="letter">G</span>Next Up Stories</h4></summary>
+						<p>Next Up stories are automatically generated by the system. They feature the main photo, headline, and metadata for each story.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">H</span>Related / Recommended Stories</h4>
-					<p>Related stories are generated by the system via categories and tags, or they can be directly currated by authors.</p>
+					<details>
+						<summary><h4><span class="letter">H</span>Related / Recommended Stories</h4></summary>
+						<p>Related stories are generated by the system via categories and tags, or they can be directly currated by authors.</p>
+					</details>
 				</li>
 				
 			</ul>
@@ -280,28 +326,40 @@
 		<div class="split">
 			<ul>
 				<li>
-					<h4><span class="letter">A</span>Gallery Headline</h4>
-					<p>This is the primary heading of a gallery page, and is featured in any context where it is referenced, such as on a search results page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182007678">copy specs visual guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">A</span>Gallery Headline</h4></summary>
+						<p>This is the primary heading of a gallery page, and is featured in any context where it is referenced, such as on a search results page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182007678">copy specs visual guide</a>.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">B</span>Gallery Metadata</h4>
-					<p>Metadata is a short set of information that describes a gallery page's attributes. Meta information includes a gallery's <em>author</em>, its <em>source url</em>, and the <em>date</em> it was published.</p>
+					<details>
+						<summary><h4><span class="letter">B</span>Gallery Metadata</h4></summary>
+						<p>Metadata is a short set of information that describes a gallery page's attributes. Meta information includes a gallery's <em>author</em>, its <em>source url</em>, and the <em>date</em> it was published.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">C</span>Introduction Content</h4>
-					<p>This is the primary paragraph of a gallery page that introduces the content below. Character counts for introduction content can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182007678">copy specs visual guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">C</span>Introduction Content</h4></summary>
+						<p>This is the primary paragraph of a gallery page that introduces the content below. Character counts for introduction content can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182007678">copy specs visual guide</a>.</p>
+					</details>
 				</li>
 				<li class="break">
-					<h4><span class="letter">D</span>Photo Gallery</h4>
-					<p>Photo gallery carousels may hold any number of photos, but it is recommended that a maximum of 15 photographs be used in any given set. Information on how to select photos can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+					<details>
+						<summary><h4><span class="letter">D</span>Photo Gallery</h4></summary>
+						<p>Photo gallery carousels may hold any number of photos, but it is recommended that a maximum of 15 photographs be used in any given set. Information on how to select photos can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter optional">E</span>Photo Headline &amp; Description</h4>
-					<p>While not required, photo headlines and descriptions help build context around a story. Character counts for photo headlines and descriptions can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182009564">copy specs visual guide.</a></p>
+					<details>
+						<summary><h4><span class="letter optional">E</span>Photo Headline &amp; Description</h4></summary>
+						<p>While not required, photo headlines and descriptions help build context around a story. Character counts for photo headlines and descriptions can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182009564">copy specs visual guide.</a></p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">F</span>Additional Page Content</h4>
-					<p>This is the supporting content for the gallery page. Character counts for paragraph content can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182009564">copy specs visual guide.</a></p>
+					<details>
+						<summary><h4><span class="letter">F</span>Additional Page Content</h4></summary>
+						<p>This is the supporting content for the gallery page. Character counts for paragraph content can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182009564">copy specs visual guide.</a></p>
+					</details>
 				</li>
 			</ul>
 		</div>
@@ -333,28 +391,40 @@
 		<div class="split">
 			<ul>
 				<li>
-					<h4><span class="letter">A</span>Video Player</h4>
-					<p>This is the primary video display area.</p>
+					<details>
+						<summary><h4><span class="letter">A</span>Video Player</h4></summary>
+						<p>This is the primary video display area.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">B</span>"Now Playing" Indicator Thumbnial</h4>
-					<p>This indicator highlights the video that is currently playing. Short descriptions of each video appear beneath each thumbnail.</p>
+					<details>
+						<summary><h4><span class="letter">B</span>"Now Playing" Indicator Thumbnial</h4></summary>
+						<p>This indicator highlights the video that is currently playing. Short descriptions of each video appear beneath each thumbnail.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">C</span>Title, Meta Information &amp; Content</h4>
-					<p>This is where the title, meta information and text content of the video are located.</p>
+					<details>
+						<summary><h4><span class="letter">C</span>Title, Meta Information &amp; Content</h4></summary>
+						<p>This is where the title, meta information and text content of the video are located.</p>
+					</details>
 				</li>
 				<li class="break">
-					<h4><span class="letter">D</span>Primary Audio Area</h4>
-					<p>This is the area where an audio file is embedded.</p>
+					<details>
+						<summary><h4><span class="letter">D</span>Primary Audio Area</h4></summary>
+						<p>This is the area where an audio file is embedded.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">E</span>"Now Playing" Indicator Thumbnail</h4>
-					<p>This indicator highlights the audio clip that is currently playing. Short descriptions of each audio clip appear beneath each thumbnail.</p>
+					<details>
+						<summary><h4><span class="letter">E</span>"Now Playing" Indicator Thumbnail</h4></summary>
+						<p>This indicator highlights the audio clip that is currently playing. Short descriptions of each audio clip appear beneath each thumbnail.</p>
+					</details>
 				</li>
 				<li>
-					<h4><span class="letter">F</span>Title, Meta Information &amp; Content</h4>
-					<p>This is where the title, meta information and text content of the audio clip are located.</p>
+					<details>
+						<summary><h4><span class="letter">F</span>Title, Meta Information &amp; Content</h4></summary>
+						<p>This is where the title, meta information and text content of the audio clip are located.</p>
+					</details>
 				</li>
 			</ul>
 		</div>
@@ -378,40 +448,58 @@
 				<div class="split">
 					<ul>
 						<li>
-							<h4><span class="letter">A</span>Section Navigation</h4>
-							<p>This is the navigation for the particular section of the site that you are currently located.</p>
+							<details>
+								<summary><h4><span class="letter">A</span>Section Navigation</h4></summary>
+								<p>This is the navigation for the particular section of the site that you are currently located.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">B</span>Main Photo / Video</h4>
-							<p>This is the main visual representation of a content page. Information on how to select a photo can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+							<details>
+								<summary><h4><span class="letter">B</span>Main Photo / Video</h4></summary>
+								<p>This is the main visual representation of a content page. Information on how to select a photo can be found in the <a href="#photoguide">photography &amp; imagery specs guide</a>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">C</span>Headline &amp; Introduction</h4>
-							<p>This is the primary heading of a content page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide</a>.</p>
+							<details>
+								<summary><h4><span class="letter">C</span>Headline &amp; Introduction</h4></summary>
+								<p>This is the primary heading of a content page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide</a>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">D</span>Page Summary</h4>
-							<p>This is the supporting description for a section's navigation and serves as a introduction to the navigation summary.</p>
+							<details>
+								<summary><h4><span class="letter">D</span>Page Summary</h4></summary>
+								<p>This is the supporting description for a section's navigation and serves as a introduction to the navigation summary.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">E</span>Navigation Summary</h4>
-							<p>The navigation summary is a more robust version of a section's navigation. Each navigation link is accompanied by supporting photography and an introductive statement.</p>
+							<details>
+								<summary><h4><span class="letter">E</span>Navigation Summary</h4></summary>
+								<p>The navigation summary is a more robust version of a section's navigation. Each navigation link is accompanied by supporting photography and an introductive statement.</p>
+							</details>
 						</li>
 						<li class="break">
-							<h4><span class="letter optional">F</span>Supplementary Page Content</h4>
-							<p>Content pages may utilize the same components as <em>Stories</em> and <em>landing page templates</em>.</p>
+							<details>
+								<summary><h4><span class="letter optional">F</span>Supplementary Page Content</h4></summary>
+								<p>Content pages may utilize the same components as <em>Stories</em> and <em>landing page templates</em>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">G</span>Navigation Summary (no photo)</h4>
-							<p>In instances where photography is not needed or used, only the link and introduction are present for each navigation item.</p>
+							<details>
+								<summary><h4><span class="letter">G</span>Navigation Summary (no photo)</h4></summary>
+								<p>In instances where photography is not needed or used, only the link and introduction are present for each navigation item.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">H</span>Branded Content Pages</h4>
-							<p>Content pages that are tied to specific events or organizations have the option of adding their respective logo and brand color above the section navigation.</p>
+							<details>
+								<summary><h4><span class="letter optional">H</span>Branded Content Pages</h4></summary>
+								<p>Content pages that are tied to specific events or organizations have the option of adding their respective logo and brand color above the section navigation.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">I</span>Registration Buttons</h4>
-							<p>Registration buttons are utilized when a call to action by the user is desired, such as signing up for an event or to be a volunteer.</p>
+							<details>
+								<summary><h4><span class="letter optional">I</span>Registration Buttons</h4></summary>
+								<p>Registration buttons are utilized when a call to action by the user is desired, such as signing up for an event or to be a volunteer.</p>
+							</details>
 						</li>
 					</ul>
 				</div>
@@ -446,36 +534,52 @@
 				<div class="split">
 					<ul>
 						<li>
-							<h4><span class="letter">A</span>Section Navigation</h4>
-							<p>This is the navigation for the particular section of the site that you are currently located.</p>
+							<details>
+								<summary><h4><span class="letter">A</span>Section Navigation</h4></summary>
+								<p>This is the navigation for the particular section of the site that you are currently located.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">B</span>Headline &amp; Introduction</h4>
-							<p>This is the primary heading and text content of an article page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide</a>.</p>
+							<details>
+								<summary><h4><span class="letter">B</span>Headline &amp; Introduction</h4></summary>
+								<p>This is the primary heading and text content of an article page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide</a>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">C</span>Page Interruptors</h4>
-							<p>A variety of page interruptors are available to interject calls to action or subcontent within an article. Examples of page interruptors are: inset images, block quotes, slideshows and factoids.</p>
+							<details>
+								<summary><h4><span class="letter optional">C</span>Page Interruptors</h4></summary>
+								<p>A variety of page interruptors are available to interject calls to action or subcontent within an article. Examples of page interruptors are: inset images, block quotes, slideshows and factoids.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">D</span>General Page Content</h4>
-							<p>Please see the <a href="https://invis.io/HB8AM5KED#/181663612_HTML_Elements">html style guide</a> for a list of basic elements.</p>
+							<details>
+								<summary><h4><span class="letter optional">D</span>General Page Content</h4></summary>
+								<p>Please see the <a href="https://invis.io/HB8AM5KED#/181663612_HTML_Elements">html style guide</a> for a list of basic elements.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">E</span>Emphasised Content</h4>
-							<p>An emphasized introduction area is used in cases where visual more emphasis needs to be placed on an article.</p>
+							<details>
+								<summary><h4><span class="letter optional">E</span>Emphasised Content</h4></summary>
+								<p>An emphasized introduction area is used in cases where visual more emphasis needs to be placed on an article.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">F</span>Multiple Columns</h4>
-							<p>Article content can be divided by up to four columns, depending on the context and quantity of information on the page.</p>
+							<details>
+								<summary><h4><span class="letter optional">F</span>Multiple Columns</h4></summary>
+								<p>Article content can be divided by up to four columns, depending on the context and quantity of information on the page.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">G</span>Inset Imagery</h4>
-							<p>Please see the <a href="#photoguide">photography &amp; imagery specs guide</a> for details on sizing and placement.</p>
+							<details>
+								<summary><h4><span class="letter optional">G</span>Inset Imagery</h4></summary>
+								<p>Please see the <a href="#photoguide">photography &amp; imagery specs guide</a> for details on sizing and placement.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">H</span>Article Body</h4>
-							<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including section subnavigation within an article page.</p>
+							<details>
+								<summary><h4><span class="letter optional">H</span>Article Body</h4></summary>
+								<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including section subnavigation within an article page.</p>
+							</details>
 						</li>
 					</ul>
 				</div>
@@ -513,20 +617,28 @@
 				<div class="split">
 					<ul>
 						<li>
-							<h4><span class="letter">A</span>Article Navigation</h4>
-							<p>This area includes the topic of the article, as well as a listing of the other articles located within that topic.</p>
+							<details>
+								<summary><h4><span class="letter">A</span>Article Navigation</h4></summary>
+								<p>This area includes the topic of the article, as well as a listing of the other articles located within that topic.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">B</span>Article Title</h4>
-							<p>This is the title of an article page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182003864">copy specs visual guide</a>.</p>
+							<details>
+								<summary><h4><span class="letter">B</span>Article Title</h4></summary>
+								<p>This is the title of an article page. Headline placements and character counts can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/182003864">copy specs visual guide</a>.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">C</span>Content Relationships</h4>
-							<p>This area displays lists of the rolls and topics that an article is related to.</p>
+							<details>
+								<summary><h4><span class="letter">C</span>Content Relationships</h4></summary>
+								<p>This area displays lists of the rolls and topics that an article is related to.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">D</span>Article Body</h4>
-							<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including data callouts within an article page.</p>
+							<details>
+								<summary><h4><span class="letter">D</span>Article Body</h4></summary>
+								<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including data callouts within an article page.</p>
+							</details>
 						</li>
 					</ul>
 				</div>
@@ -541,48 +653,70 @@
 				<div class="split">
 					<ul>
 						<li>
-							<h4><span class="letter">A</span>Feature Story</h4>
-							<p>This is the most important story on a visual groups page and has the most visual emphasis. Featured stories should provide site users with the context of the topic or category page.</p>
+							<details>
+								<summary><h4><span class="letter">A</span>Feature Story</h4></summary>
+								<p>This is the most important story on a visual groups page and has the most visual emphasis. Featured stories should provide site users with the context of the topic or category page.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">B</span>Featured Category Summary</h4>
-							<p>This is a list of articles and links that are directly related to the category of the feature story.</p>
+							<details>
+								<summary><h4><span class="letter">B</span>Featured Category Summary</h4></summary>
+								<p>This is a list of articles and links that are directly related to the category of the feature story.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter">C</span>Visual Stories</h4>
-							<p>There are the second-tier stories that tie in directly with a section's category.</p>
+							<details>
+								<summary><h4><span class="letter">C</span>Visual Stories</h4></summary>
+								<p>There are the second-tier stories that tie in directly with a section's category.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">D</span>Featured Entry Points</h4>
-							<p>Featured entry point links act as a separator between story groups. They each have a short message and an associated icon or image. Featured entry points are grouped by site areas, such as, "about us."</p>
+							<details>
+								<summary><h4><span class="letter optional">D</span>Featured Entry Points</h4></summary>
+								<p>Featured entry point links act as a separator between story groups. They each have a short message and an associated icon or image. Featured entry points are grouped by site areas, such as, "about us."</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">E</span>Site Introduction Banner</h4>
-							<p>This area is designated for important messages or alerts.</p>
+							<details>
+								<summary><h4><span class="letter optional">E</span>Site Introduction Banner</h4></summary>
+								<p>This area is designated for important messages or alerts.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">F</span>Short Story Summaries</h4>
-							<p>Short story summaries are contained within a grid structure and may span across two, three or four columns. Short summaries include teaser text for the each story.</p>
+							<details>
+								<summary><h4><span class="letter optional">F</span>Short Story Summaries</h4></summary>
+								<p>Short story summaries are contained within a grid structure and may span across two, three or four columns. Short summaries include teaser text for the each story.</p>
+							</details>
 						</li>
 						<li class="break">
-							<h4><span class="letter optional">G</span>Media Carousel</h4>
-							<p>A media carousel may be added to the page flow create more context around a topic and act as a separator between visual story grids.</p>
+							<details>
+								<summary><h4><span class="letter optional">G</span>Media Carousel</h4></summary>
+								<p>A media carousel may be added to the page flow create more context around a topic and act as a separator between visual story grids.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">H</span>Factoid / Call to Action</h4>
-							<p>When applicable a factoid or call to action may be inserted into the page flow to create more context and to act as a separator between visual story grids.</p>
+							<details>
+								<summary><h4><span class="letter optional">H</span>Factoid / Call to Action</h4></summary>
+								<p>When applicable a factoid or call to action may be inserted into the page flow to create more context and to act as a separator between visual story grids.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">I</span>Visual Story Grid</h4>
-							<p>Stories are grouped together in grids so that they are organized in an easily scannable hierarchy. Visual story grids can contain both visual stories and short story summaries.</p>
+							<details>
+								<summary><h4><span class="letter optional">I</span>Visual Story Grid</h4></summary>
+								<p>Stories are grouped together in grids so that they are organized in an easily scannable hierarchy. Visual story grids can contain both visual stories and short story summaries.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">J</span>Visual Summary Grid</h4>
-							<p>Visual Summary Grids are comprised only of short story summaries. Short summaries are comprised of an image, a categoryn link and a headline.</p>
+							<details>
+								<summary><h4><span class="letter optional">J</span>Visual Summary Grid</h4></summary>
+								<p>Visual Summary Grids are comprised only of short story summaries. Short summaries are comprised of an image, a categoryn link and a headline.</p>
+							</details>
 						</li>
 						<li>
-							<h4><span class="letter optional">K</span>Category Summary List</h4>
-							<p>Ths is a list of articles and links that are related to the category of a landing page.</p>
+							<details>
+								<summary><h4><span class="letter optional">K</span>Category Summary List</h4></summary>
+								<p>Ths is a list of articles and links that are related to the category of a landing page.</p>
+							</details>
 						</li>
 					</ul>
 				</div>	
@@ -615,12 +749,16 @@
 		<div class="split">
 			<ul>
 				<li>
-					<h4><span class="letter">A</span>Category Title</h4>
-					<p>This is the title of the topic or category that the stories are associated with.</p>
+					<details>
+						<summary><h4><span class="letter">A</span>Category Title</h4></summary>
+						<p>This is the title of the topic or category that the stories are associated with.</p>
+					</details>
 				</li>
 				<li class="break">
-					<h4><span class="letter">B</span>Story Listing</h4>
-					<p>This is the listing of story summaries and featured stories that fall under the chosen topic or category.</p>
+					<details>
+						<summary><h4><span class="letter">B</span>Story Listing</h4></summary>
+						<p>This is the listing of story summaries and featured stories that fall under the chosen topic or category.</p>
+					</details>
 				</li>
 			</ul>
 		</div>
