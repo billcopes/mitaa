@@ -1,4 +1,4 @@
-/* Reset css, based on Eric Meyer's*/
+7/* Reset css, based on Eric Meyer's*/
 /* Make all the elements border-box, so that padding doesn't affect box size*/
 
 html {
@@ -6,6 +6,9 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+*:focus {
+    outline: none;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -148,10 +151,12 @@ header h1 {
 	max-width: 1000px;
 }
 
-main { padding: 2em 2em 8em;}
+main {
+	padding: 2em 2em 8em;
+}
 section {
 	padding: 1em;
-	border-top: solid 1px #becad4;
+	/*border-top: solid 1px #becad4;*/
 	margin: 2em 0 0;
 	width: 70%;
 }
@@ -180,7 +185,7 @@ div.split div {
 	margin: 4em 0 0;
 	background: #fcfcfc;
 	padding: 2em 1em 1em;
-	border: dashed 1px #ececec;
+	border: dashed 1px #ccc;
 }
 
 
@@ -362,6 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 1em 0 .25em;
 	margin: 0 0 .5em;
 	letter-spacing: .025em;
+	line-height: 1.15em;
 }
 h1 { 
 	font-size: 320%;
@@ -395,6 +401,15 @@ h4 a:hover:after {
 	color: #bbb;
 }
 
+aside p {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-size: .85em;
+	line-height: 2.75em;
+}
+	
+aside h3 {font-size: 1.25em;}
+
 aside h4 a:after{content:"";}
 aside h4 a:before{
 	display: inline-block;
@@ -407,9 +422,10 @@ aside h4 a:before{
 	
 h2 span { font-weight: 100; }
 h3 {
-	font-size: 180%;
+	font-size: 160%;
 	font-weight: 600;
-	letter-spacing: 0; 
+	letter-spacing: 0;
+	margin: 0; 
 }
 h4 { font-size: 140%; }
 h5, h6 {
@@ -430,12 +446,29 @@ i, em {
 	font-weight: 600;
 } 
 
+section h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 240%;
+	font-weight: 100;
+	line-height: 1.5em;
+}
+
+summary h4 {display: inline-block;}
+summary::-webkit-details-marker { color: #0077d2;}
+
 div.shaded h6 {
     -webkit-column-span: all;
     column-span: all;
-	margin: 1em;
-	padding: 0 0 1em;
-	border-bottom: solid 1px #ccc;	
+	text-transform: none;
+	letter-spacing: .045em;
+	padding: 1.2em 0 .8em 1em;
+	margin: 0;
+	font-size: 1.25em;
+	font-weight: 600;
+	/*margin: 1em;*/
+	border-bottom: dashed 1px #ccc
+	
 }
 
 small {
@@ -458,11 +491,13 @@ p, .intro p, .intro ul {
 	margin: 0 0 1em;
 }
 section p { max-width: 80%; }
-.content-authoring img { margin: 0 0 1em;}
+.content-authoring img {
+	margin: 0 0 1em;
+	max-width: 900px;
+}
 strong { font-weight: 700;}
 section > div {
-	margin: 3em 0;
-	border-bottom: dashed 1px #ccc;
+	margin: 1em 0;
 	position: relative;
 	padding: 0 0 6em;
 }
@@ -471,10 +506,13 @@ section > div:last-child{
 	padding: 0;
 }
 section div p {
-	font-size: 100%;
 	line-height: 1.5em;
 	margin: 0 0 2em;
- }
+}
+section div div p {
+	font-size: 100%;
+}
+
  section div a.img-link {
 	 position: relative;
 	 display: block;
@@ -564,12 +602,15 @@ section div a.img-link:after  {
 	font-size: 18px;
 	padding-top: 4px;
 }
+/*
 .do a.img-link img { border: solid 2px #6EBE44; }
+.dont a.img-link img { border: solid 2px #df286d; }
+*/
 .dont a.img-link:after {
 	background: #df286d;
 	content:"\00D7";
 }
-.dont a.img-link img { border: solid 2px #df286d; }
+
 
 a.button {
 	border: solid 1px #0077d2;
