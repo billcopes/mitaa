@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="MITAA Content Authoring Guide">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<link rel="shortcut icon" href="http://www.mothdesign.net/images/favicon.ico">
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="lightbox.min.css">
@@ -58,11 +59,9 @@
 	    });
 	</script>
 </head>
-<body>
+<body class="content-authoring">
 	<header class="sub">
 		<a href="./" class="moth-logo"></a>
-		<span class="title">Content Authoring Guidelines &amp; Best Practices</span>
-		<span class="date">Aug. 23, 2016</date>
 	</header>
 	<main>
 		<header>
@@ -76,7 +75,6 @@
 				<li><a href="#sections">Introduction to Sections</a></li>
 				<li><a href="#stories">Story Pages</a>
 					<ol>
-						<li><a href="#storycomponents">Story Page Components</a></li>
 						<li><a href="#featuredstory">Featured Story</a></li>
 						<li><a href="#visualstory">Visual Story</a></li>
 						<li><a href="#gallery">Gallery Slideshow</a></li>
@@ -85,8 +83,8 @@
 				</li>
 				<li><a href="#contentpages">Content Pages</a>
 					<ol>
-						<li><a href="#contentpagescomponents">Landing Pages &amp; Components</a></li>
-						<li><a href="#contentarticles">Article Pages &amp; Components</a></li>
+						<li><a href="#landingpages">Landing Pages </a></li>
+						<li><a href="#contentarticles">Article Pages </a></li>
 						<li><a href="#knowledgebasearticles">Knowledge Base Articles</a></li>
 					</ol>
 				</li>
@@ -102,12 +100,9 @@
 					</ol>
 				</li>
 			</ol>
-			<section>
-				<p><span class="letter optional">•</span> Optional</p>
-				<p><span class="letter">•</span> Required</p>
-			</section>
-			<h3><a href="index.html">MITAA Website Guidelines &amp; Documentation</a></h3>
-			<!--a href="#" class="info">++</a-->
+			<p><span class="letter optional">•</span> Optional / Flexible</p>
+			<p><span class="letter">•</span> Required / Automatic</p>
+			<!--p><a href="index.html">MITAA Website Guidelines &amp; Documentation</a></p-->
 		</aside>
 		<!--number1-->
 		<section id="purpose">
@@ -115,23 +110,34 @@
 			<p>This guide was created to help new authors of the MIT Alumni Association website create and curate beautiful pages and content. These guidelines cover the different template types and illustrates how elements should be used in each page. Adherence to this guide is crucial in order to maintain the visual integrity of the Alumni Association brand and to ensure that site content is authored optimally.</p>
 		</section>
 		<!--number2-->
-		<section id="sections">
+		<section id="sections" class="intro">
 			<h2><span>02.</span> Introduction to Sections</h2>
-			<h3><a href="#stories">Story Pages</a></h3>
-			<p>This section introduces the Story pages, which are the most commonly authored page type on the Alumni website. It outlines components used to create a story, and illustrates the best practices. Story pages are created by site authors, or content is collected from other MIT sources.</p>
-			<h3><a href="#contentpages">Content Pages</a></h3>
-			<p>This section outlines the different content page types, their components, and how to best construct them. Content pages are created by site authors as well as users of the site with specific permissions.</p>
-			<h3><a href="#landingpages">Landing Pages</a></h3>
-			<p>Landing pages are produced by site authors, or are automatically generated via currated topic tags.</p>
-			<h3><a href="#photoguide">Photography Guidelines</a></h3>
-			<p>This section provides site authors photography guidance and specifications for all page types.</p>
+			
+			<ul class="intro">
+				<li>
+					<h4><a href="#stories">Story Pages</a></h4>
+					<p>This section introduces the Story pages, which are the most commonly authored page type on the Alumni website. It outlines components used to create a story, and illustrates the best practices. Story pages are created by site authors, or content is collected from other MIT sources.</p>
+				</li>
+				<li>
+					<h4><a href="#contentpages">Content Pages</a></h4>
+					<p>This section outlines the different content page types, their components, and how to best construct them. Content pages are created by site authors as well as users of the site with specific permissions.</p>
+				</li>
+				<li>
+					<h4><a href="#landingpages">Landing Pages</a></h4>
+					<p>Landing pages are produced by site authors, or are automatically generated via currated topic tags.</p>
+				</li>
+				<li>
+					<h4><a href="#photoguide">Photography Guidelines</a></h4>
+					<p>This section provides site authors photography guidance and specifications for all page types.</p>
+				</li>
+			<ul/>
 		</section> 
 		<section id="stories">
 			<h2><span>03.</span> Story Pages</h2>
-			<div id="storycomponents">
-				<h3>Story Page Components</h3>
-				<p> A story is comprised of several different components, ranging from a story's photograpy and text, to is metadata and other related content pieces. Please see the content below for information about each story component.</p>
-				<img src="images/stories/storycomponents.png" alt="Story Page Components Screen Shot">
+			<div id="featuredstory">
+				<h3>Featured Story</h3>
+				<p>Featured stories are the most robust of all story template types. Featured stories are meant to be rich reading experiences and should include multiple inset elements: carousels, embedded media, factoids and quotes. Feature story templates should be used for important articles or to highlight the profiles of influential people.</p>
+				<a href="images/stories/storycomponents.jpg" data-lightbox="Feature Story" class="img-link"><img src="images/stories/storycomponents.jpg" alt="Story Page Components Screen Shot"></a>
 				<div class="split">
 					<ul>
 						<li>
@@ -195,37 +201,31 @@
 								<p>Next Up stories are automatically generated by the system. They feature the main photo, headline, and metadata for each story.</p>
 							</details>
 						</li>
-						<li>
+						<!--li>
 							<details>
 								<summary><h4><span class="letter">K</span>Media Flag</h4></summary>
 								<p>Media flags denote the type of media content that is associated with a story. Each flag is automatically generated based on the media type.</p>
 							</details>
-						</li>
+						</li-->
 						<li>
 							<details>
-								<summary><h4><span class="letter">L</span>Related / Recommended Stories</h4></summary>
+								<summary><h4><span class="letter">K</span>Related / Recommended Stories</h4></summary>
 								<p>Related stories are generated by the system via categories and tags, or they can be directly currated by authors.</p>
 							</details>
 						</li>
 					</ul>
-				</div>
-			</div>
-			<div id="featuredstory">
-				<h3>Featured Story</h3>
-				<p>Featured stories are the most robust of all story template types. Featured stories are meant to be rich reading experiences and should include multiple inset elements: carousels, embedded media, factoids and quotes. Feature story templates should be used for important articles or to highlight the profiles of influential people.</p>
+				</div>	
 				<div class="split shaded">
 					<h6>Best Practices</h6>
-					<div class="left do">
+					<div class="do">
 						<h5>Do</h5>
-						<a href="images/stories/feat_do_full.png" data-lightbox="Featured Storydos-1" class="img-link"><img src="images/stories/feat_do_thumb.png" alt="Featured Story Do's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Include multiple page interruptors, such as block quotes and inset photography, to divide up the content keep the story visually interesting.</p></li>
 							<li><p>Keep the story length to around 1600 words, excluding media and photography captions. Character counts for feature story elements can be found in the <a href="https://invis.io/GV87NKZSY#/182009564_M">copy specs visual guide.</a></p></li>
 						</ul>
 					</div>
-					<div class="right dont break">
+					<div class="dont break">
 						<h5>Don't</h5>
-						<a href="images/stories/feat_dont_full.png" data-lightbox="Featured Storydonts-1" class="img-link"><img src="images/stories/feat_dont_thumb.png" alt="Featured Story Dont's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Avoid using too many page interruptors, as it will make story difficult to follow.</p></l>
 							<li><p>Do not use multiple instances of the same type of interruptor in succession.</p></li>
@@ -234,17 +234,10 @@
 					</div>
 				</div>
 			</div>
-	<div id="visualstory">
+		<div id="visualstory">
 		<h3>Visual Story</h3>
 		<p>Visual stories are used as a general purpose article template, and should be utilized for the majority of the articles published on the site. Visual stories have many of the same attributes as featured stories, but do not contain as much content. Visual stories use a minimum number of inset story components in order to keep the content succinct.</p>
-		<div class="split">
-			<div class="left">
-				<img src="images/stories/visual_components_a.png" alt="Visual Story Screen Shot" class="two-thirds">
-			</div>
-			<div class="right">
-				<img src="images/stories/visual_components_b.png" alt="Visual Story Screen Shot" class="two-thirds">
-			</div>
-		</div>
+		<a href="images/stories/visualstories.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/stories/visualstories.jpg" alt="Story Page Components Screen Shot"></a>
 		<div class="split">
 			<ul>
 				<li>
@@ -300,17 +293,15 @@
 		</div>
 		<div class="split shaded" id="visualstorydosdonts">
 			<h6>Best Practices</h6>
-			<div class="left do">
+			<div class="do">
 				<h5>Do</h5>
-				<a href="images/stories/visualstorydo.png" data-lightbox="Visual Storydos-1" class="img-link"><img src="images/stories/visualstorydothumb.png" alt="Visual Story Do's Screen Shot" class=""></a>
 				<ul>
 					<li><p>Use a maximum of 2 page interruptors so that the story remains short.</p></li>
 					<li><p>Keep the story length to around 1600 words, excluding media and photography captions. Character counts for feature story elements can be found in the <a href="https://invis.io/GV87NKZSY#/182007013_J">copy specs visual guide.</a></p></li>
 				</ul>
 			</div>
-			<div class="right dont break">
+			<div class="dont break">
 				<h5>Don't</h5>
-				<a href="images/stories/visualstorydontsthumb.png" data-lightbox="Visual Storydos-1" class="img-link"><img src="images/stories/visualstorydontsthumb.png" alt="Visual Story Do's Screen Shot" class=""></a>
 				<ul>
 					<li><p>Do not use multiple instances of the same type of interruptor in succession.</p></li>
 					<li><p>Don't place page interruptors too closely together to avoid making the page feel crowded.</p></li>
@@ -321,10 +312,7 @@
 	<div id="gallery">
 		<h3>Gallery Slideshow</h3>
 		<p>Galleries are used to showcase photo-driven stories. Galleries can exist as their own page or can be placed in a modal overlay if the gallery is linked to within a page.</p>		
-		<div class="split">
-			<div class="left"><img src="images/stories/galllerycomponents.png" alt="Gallery Slideshow Screen Shot" class="two-thirds"></div>
-			<div class="right"><img src="images/stories/galllerymodal.png" alt="Gallery Slideshow Screen Shot" class="two-thirds"></div>
-		</div>
+		<a href="images/stories/gallery.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/stories/gallery.jpg" alt="Story Page Components Screen Shot"></a>
 		<div class="split">
 			<ul>
 				<li>
@@ -367,16 +355,14 @@
 		</div>
 		<div class="split shaded">
 			<h6>Best Practices</h6>
-			<div class="left do">
+			<div class="do">
 				<h5>Do</h5>
-				<a href="images/stories/gallerydo.png" data-lightbox="Gallery Slideshowdos-1" class="img-link"><img src="images/stories/gallerydo.png" alt="Gallery Slideshow Do's Screen Shot" class=""></a>
 				<ul>
 					<li><p>Make sure that photos have headlines and captions. Although photo headlines and captions are optional, associating text content with each photo helps an author effectively communicate their story. </p></li>
 				</ul>
 			</div>
-			<div class="right dont break">
+			<div class="dont break">
 				<h5>Don't</h5>
-				<a href="images/stories/gallerydont.png" data-lightbox="Gallery Slideshowdos-1" class="img-link"><img src="images/stories/gallerydont-thumb.png" alt="Gallery Slideshow Dont's Screen Shot" class=""></a>
 				<ul>
 					<li><p>Avoid using more than 15 photos in a carousel. Although a gallery can accomodate more than 15 photos, it is recommended to keep the quantity low to ensure that the reader will view all of them and continue through the story.</p></l>
 				</ul>
@@ -384,69 +370,34 @@
 		</div>
 	</div>
 	<div id="linkedmedia">
-		<h3>Audio / Video Page</h3>
-		<p>Audio and video content pieces have the option to be treated as article pages that include supporting and related content. Audio and video content can also be placed within photo gallery modals.</p>
-		<div class="split">
-			<div class="left"><img src="images/stories/video.png" alt="Audio / Video Page Screen Shot" class="two-thirds"></div>
-			<div class="right"><img src="images/stories/audio.png" alt="Audio / Video Page Screen Shot" class="two-thirds"></div>
-		</div>
-		<div class="split">
+		<h3>Video / Audio Page</h3>
+		<p>Video and audeo content pi eces have the option to be treated as article pages that include supporting and related content. Audio and video content can also be placed within photo gallery modals.</p>
+		<a href="images/stories/media.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/stories/media.jpg" alt="Story Page Components Screen Shot"></a>
+		<div class="">
 			<ul>
 				<li>
 					<details>
-						<summary><h4><span class="letter">A</span>Video Player</h4></summary>
+						<summary><h4><span class="letter">A</span>Media Player</h4></summary>
 						<p>This is the primary video display area.</p>
 					</details>
 				</li>
 				<li>
 					<details>
-						<summary><h4><span class="letter">B</span>"Now Playing" Indicator Thumbnial</h4></summary>
-						<p>This indicator highlights the video that is currently playing. Short descriptions of each video appear beneath each thumbnail.</p>
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary><h4><span class="letter">C</span>Title, Meta Information &amp; Content</h4></summary>
+						<summary><h4><span class="letter">B</span>Title, Meta Information &amp; Content</h4></summary>
 						<p>This is where the title, meta information and text content of the video are located.</p>
 					</details>
 				</li>
-				<li class="break">
-					<details>
-						<summary><h4><span class="letter">D</span>Primary Audio Area</h4></summary>
-						<p>This is the area where an audio file is embedded.</p>
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary><h4><span class="letter">E</span>"Now Playing" Indicator Thumbnail</h4></summary>
-						<p>This indicator highlights the audio clip that is currently playing. Short descriptions of each audio clip appear beneath each thumbnail.</p>
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary><h4><span class="letter">F</span>Title, Meta Information &amp; Content</h4></summary>
-						<p>This is where the title, meta information and text content of the audio clip are located.</p>
-					</details>
-				</li>
 			</ul>
-		</div>
-		<div class="shaded">
-			<h6>Best Practices</h6>
-			<div class="do">
-				<ul>
-					<li class="break"><p>Please review and follow the best practices for creating a <a href="#visualstorydosdonts">Visual Story Page</a>.</p></li>
-				</ul>
-			</div>
 		</div>
 	</div>
 </section>
 <section id="contentpages">
 	<h2><span>04.</span> Content Pages</h2>
 	<p>Content pages are the "non-story" page templates that are utilized across the alumni websitesite. Content pages are authored primarily for informational purposes, such as <em>About Us</em> content or special events, like the <em>Alumni Leadership Conference</em>. There are three content page types: content landing pages, content article pages and knowledge base articles.</p>
-			<div id="contentpagescomponents">
-				<h3>Landing Pages &amp; Components</h3>
+			<div id="landingpages">
+				<h3>Landing Pages </h3>
 				<p>Content landing pages act as the gateways to the different sections within the alumni site. Please see the information below to learn how each content page component is utilized.</p>
-				<img src="images/contentpages/contentcomponents.png" alt="Landing Pages &amp; Components Screen Shot">
+				<a href="images/contentpages/content landing.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/contentpages/content landing.jpg" alt="Landing Pages  Screen Shot"></a>
 				<div class="split">
 					<ul>
 						<li>
@@ -505,22 +456,18 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div>
 				<div class="split shaded">
 					<h6>Best Practices</h6>
-					<div class="left do">
+					<div class="do">
 						<h5>Do</h5>
-						<a href="images/contentpages/benefits.png" data-lightbox="Landing Pages &amp; Componentsdos-1" class="img-link"><img src="images/contentpages/benefits-thumb.png" alt="Landing Pages &amp; Components Do's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Be sure to select an introduction photo that follows the alumni style guide. Please see the <a href="#photoguide">photography &amp; imagery specs guide</a> for details.</p></li>
 							<li><p>Keep the page and navigation summaries succinct so that the content is easily consumable. See the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide</a> for character counts.</p></li>
 							<li><p>Be sure to add contextual supplementry content to the landing page.</p></li>
 						</ul>
 					</div>
-					<div class="right dont break">
+					<div class="dont break">
 						<h5>Don't</h5>
-						<a href="images/contentpages/benefits_dont.png" data-lightbox="Landing Pages &amp; Componentsdonts-1" class="img-link"><img src="images/contentpages/benefits-dont-thumb.png" alt="Landing Pages &amp; Components Dont's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Keep introduction and navigation copy succinct.</p></li>
 							<li><p>Never mix navigation summary types.</p></li>
@@ -530,9 +477,9 @@
 				</div>
 			</div>
 			<div id="contentarticles">
-				<h3>Article Pages &amp; Components</h3>
+				<h3>Article Pages </h3>
 				<p>Article pages are the most-used template type used across the alumni website.</p>
-				<img src="images/contentpages/articlecomponents.png" alt="Article Pages &amp; Components" class="">
+				<a href="images/contentpages/article.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/contentpages/article.jpg" alt="Article Pages " class=""></a>
 				<div class="split">
 					<ul>
 						<li>
@@ -549,38 +496,14 @@
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter optional">C</span>Page Interruptors</h4></summary>
-								<p>A variety of page interruptors are available to interject calls to action or subcontent within an article. Examples of page interruptors are: inset images, block quotes, slideshows and factoids.</p>
+								<summary><h4><span class="letter optional">C</span>Article Content</h4></summary>
+								<p>Article pages are meant to be flexible, thereby allowing any pattern to be placed within the article body. Please see the <a href="https://invis.io/HB8AM5KED#/181663612_HTML_Elements">html style guide</a> for a list of basic HTML elements.</p>
 							</details>
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter optional">D</span>General Page Content</h4></summary>
-								<p>Please see the <a href="https://invis.io/HB8AM5KED#/181663612_HTML_Elements">html style guide</a> for a list of basic elements.</p>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary><h4><span class="letter optional">E</span>Emphasised Content</h4></summary>
-								<p>An emphasized introduction area is used in cases where visual more emphasis needs to be placed on an article.</p>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary><h4><span class="letter optional">F</span>Multiple Columns</h4></summary>
-								<p>Article content can be divided by up to four columns, depending on the context and quantity of information on the page.</p>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary><h4><span class="letter optional">G</span>Inset Imagery</h4></summary>
-								<p>Please see the <a href="#photoguide">photography &amp; imagery specs guide</a> for details on sizing and placement.</p>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary><h4><span class="letter optional">H</span>Article Body</h4></summary>
-								<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including section subnavigation within an article page.</p>
+								<summary><h4><span class="letter optional">D</span>Multiple Columns</h4></summary>
+								<p>Content can be divided by up to four columns depending on the context and content pattern used.</p>
 							</details>
 						</li>
 					</ul>
@@ -588,19 +511,16 @@
 				<div>
 					<div class="split shaded">
 						<h6>Best Practices</h6>
-						<div class="left do">
+						<div class="do">
 							<h5>Do</h5>
-							<a href="images/contentpages/benefitsservices.png" data-lightbox="Article Pages &amp; Componentsdos-1" class="img-link"><img src="images/contentpages/benefitsservicesthumb.png" alt="Article Pages &amp; Components Do's Screen Shot" class=""></a>
 							<ul>
 								<li><p>Keep the article length to around 1600 words, excluding media and photography captions. Character counts for content article pages can be found in the <a href="https://projects.invisionapp.com/share/GV87NKZSY#/screens/179776148">copy specs visual guide.</a></p></li>
 								<li><p>Include multiple page interruptors, such as block quotes and inset photography, to divide up the content keep the article visually interesting.</p></li>
 							</ul>
 						</div>
-						<div class="right dont break">
+						<div class="dont break">
 							<h5>Don't</h5>
-							<a href="images/contentpages/contentarticledonts.png" data-lightbox="Article Pages &amp; Componentsdos-1" class="img-link"><img src="images/contentpages/contentarticledonts-thumb.png" alt="Article Pages &amp; Components Dont's Screen Shot" class=""></a>
 							<ul>
-								<li><p>Do not use the emphasized content heading if the text does not fit properly.</p></li>
 								<li><p>Avoid injecting a page interruptor too early into the article.</p></li>
 								<li><p>Avoid mixing content types across columns to keep the viewing experience consistent.</p></li>
 								<li><p>Do not use multiple columns if the content does not suit that paradigm.</p></li>
@@ -612,10 +532,8 @@
 			<div id="knowledgebasearticles">
 				<h3>Knowledge Base Articles</h3>
 				<p>The knowledge base is a section of the site where alumni volunteers can find information to help them assist with their general voluneer responsibilities. Knowledge base article templates have the same publishing capabilities as content article templates.</p>
-				<div class="split">
-					<div class="left"><img src="images/contentpages/kbarticle.png" alt="Knowledge Base Articles" class=""></div>
-					<div class="right"><img src="images/contentpages/kbarticle2.png" alt="Knowledge Base Articles" class=""></div>
-				</div>
+				<a href="images/contentpages/kb.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/contentpages/kb.jpg" alt="Story Page Components Screen Shot"></a>
+				
 				<div class="split">
 					<ul>
 						<li>
@@ -638,7 +556,7 @@
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter">D</span>Article Body</h4></summary>
+								<summary><h4><span class="letter optional">D</span>Article Body</h4></summary>
 								<p>Article pages are meant to be flexible, thereby allowing any content type to be placed within the article body. An example of this would be including data callouts within an article page.</p>
 							</details>
 						</li>
@@ -651,7 +569,7 @@
 			<div id="visualgroups">
 				<h3>Visual Groups Landing Page</h3>
 				<p>Visual groups pages are the primary landing pages of the site. Visual groups templates are comprised of story grids that are curated by topic. Topic grids are meant to be separated by visual interruptors, such as media carousels or featured entry points. The visual groups template is only meant to be utilized for the alumni home page and for important publications, such as the travel program and Slice of MIT. </p>
-				<img src="images/landingpages/visualgroupcomponents.png" alt="Visual Groups Landing Page Screen Shot">
+				<a href="images/landingpages/visualgroups.jpg" data-lightbox="Visual Story" class="img-link"><img src="images/landingpages/visualgroups.jpg" alt="Story Page Components Screen Shot"></a>
 				<div class="split">
 					<ul>
 						<li>
@@ -684,13 +602,13 @@
 								<p>This area is designated for important messages or alerts.</p>
 							</details>
 						</li>
-						<li>
+						<li class="break">
 							<details>
 								<summary><h4><span class="letter optional">F</span>Short Story Summaries</h4></summary>
 								<p>Short story summaries are contained within a grid structure and may span across two, three or four columns. Short summaries include teaser text for the each story.</p>
 							</details>
 						</li>
-						<li class="break">
+						<li>
 							<details>
 								<summary><h4><span class="letter optional">G</span>Media Carousel</h4></summary>
 								<p>A media carousel may be added to the page flow create more context around a topic and act as a separator between visual story grids.</p>
@@ -698,25 +616,19 @@
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter optional">H</span>Factoid / Call to Action</h4></summary>
-								<p>When applicable a factoid or call to action may be inserted into the page flow to create more context and to act as a separator between visual story grids.</p>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary><h4><span class="letter optional">I</span>Visual Story Grid</h4></summary>
+								<summary><h4><span class="letter optional">H</span>Visual Story Grid</h4></summary>
 								<p>Stories are grouped together in grids so that they are organized in an easily scannable hierarchy. Visual story grids can contain both visual stories and short story summaries.</p>
 							</details>
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter optional">J</span>Visual Summary Grid</h4></summary>
+								<summary><h4><span class="letter optional">I</span>Visual Summary Grid</h4></summary>
 								<p>Visual Summary Grids are comprised only of short story summaries. Short summaries are comprised of an image, a categoryn link and a headline.</p>
 							</details>
 						</li>
 						<li>
 							<details>
-								<summary><h4><span class="letter optional">K</span>Category Summary List</h4></summary>
+								<summary><h4><span class="letter optional">J</span>Category Summary List</h4></summary>
 								<p>Ths is a list of articles and links that are related to the category of a landing page.</p>
 							</details>
 						</li>
@@ -724,18 +636,16 @@
 				</div>	
 				<div class="split shaded">
 					<h6>Best Practices</h6>
-					<div class="left do">
+					<div class="do">
 						<h5>Do</h5>
-						<a href="images/landingpages/homelong.jpg" data-lightbox="Visual Groups Landing Pagedos-1" class="img-link"><img src="images/landingpages/homelong-thumb.png" alt="Visual Groups Landing Page Do's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Be sure to select engaging stories that convey the purpose of the page.</p></li>
 							<li><p>Use page interruptors, such as featured entry points and media carousels, to drive users to different areas and types of content.</p></li>
 							<li><p>Be sure to include stories with different content topics, and that they are related to the parent category.</p></li>
 						</ul>
 					</div>
-					<div class="right dont break">
+					<div class="dont break">
 						<h5>Don't</h5>
-						<a href="images/landingpages/visualgroupsdont.jpg" data-lightbox="Visual Groups Landing Pagedos-1" class="img-link"><img src="images/landingpages/visualgroupsdont-thumb.png" alt="Visual Groups Landing Page Dont's Screen Shot" class=""></a>
 						<ul>
 							<li><p>Make sure the stories appearing in the feature area always have photography.</p></li>
 							<li><p>Avoid placing interruptors directly beneath the featured story area.</p></li>
@@ -748,7 +658,8 @@
 	<div id="categorylandingpage">
 		<h3>Category Landing Page</h3>		<p>Category landing pages are templates that are <strong>automatically generated</strong> by clicking on a topic or category tag and are not created by content authors. Stories on category landing pages are listed chronologically. Featured stories will have a more visually emphasized photo and larger headline text, but do not include short teaser copy.</p>
 		<img src="images/landingpages/categorylandingpage.png" alt="Category Landing Page Screen Shot" class="half">
-		<div class="split">
+		<a href="images/landingpages/" data-lightbox="Visual Story" class="img-link"><img src="images/landingpages/" alt="Story Page Components Screen Shot"></a>
+		<div>
 			<ul>
 				<li>
 					<details>
@@ -756,10 +667,16 @@
 						<p>This is the title of the topic or category that the stories are associated with.</p>
 					</details>
 				</li>
-				<li class="break">
+				<li>
 					<details>
 						<summary><h4><span class="letter">B</span>Story Listing</h4></summary>
 						<p>This is the listing of story summaries and featured stories that fall under the chosen topic or category.</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><h4><span class="letter">C</span>Featured Story</h4></summary>
+						<p>Something about a featured story.</p>
 					</details>
 				</li>
 			</ul>
@@ -777,10 +694,10 @@
 			<div class="intro">
 				<h3>Overview</h3>
 				<p>There are three categories of photos, each serving a unique purpose:</p>
-				<ul class="intro two-thirds">
-					<li><p><a href="#storyphotos"><strong>Story photos</strong></a> make up a majority of the site's imagery. These include the photos used for articles, features, video and gallery pages.</p></li>
-					<li><p><a href="#contentlandingphotos"><strong>Content photos</strong></a>  are used to support static content for main navigation item landing pages.</p></li>
-					<li><p><a href="#eventphotos"><strong>Event photos</strong></a> include a static cover image, and photos describing individual events.</p></li>
+				<ul class="intro">
+					<li><a href="#storyphotos"><strong>Story photos</strong></a> make up a majority of the site's imagery. These include the photos used for articles, features, video and gallery pages.</li>
+					<li><a href="#contentlandingphotos"><strong>Content photos</strong></a>  are used to support static content for main navigation item landing pages</li>
+					<li><a href="#eventphotos"><strong>Event photos</strong></a> include a static cover image, and photos describing individual events.</li>
 				</ul>
 			</div>
 			<div id="storyphotos">
@@ -873,7 +790,7 @@ selecting a focal point, the CMS will automate other sizes that the image will h
 				</div>
 				<div class="shaded split">
 					<h6>Best Practices</h6>
-					<div class="left do">
+					<div class="do">
 						<h5>Do</h5>
 						<a href="images/photoguide/content_do_lg.png" data-lightbox="Content Landing Photosdos-1" class="img-link"><img src="images/photoguide/content_do.png" alt="Content Landing Photos Do's Screen Shot" class=""></a>
 						<ul>
@@ -885,7 +802,7 @@ selecting a focal point, the CMS will automate other sizes that the image will h
 							<li><p>Natural interactions, less posing</p></li>
 						</ul>
 					</div>
-					<div class="right dont break">
+					<div class="dont break">
 						<h5>Don't</h5>
 						<a href="images/photoguide/content_dont_lg.png" data-lightbox="Content Landing Photosdos-1" class="img-link"><img src="images/photoguide/content_dont.png" alt="Content Landing Photos Dont's Screen Shot" class=""></a>
 						<ul>
@@ -913,7 +830,7 @@ selecting a focal point, the CMS will automate other sizes that the image will h
 				</div>
 				<div class="shaded split">
 					<h6>Best Practices</h6>
-					<div class="left do">
+					<div class="do">
 						<h5>Do</h5>
 						<a href="images/photoguide/event_item_do.png" data-lightbox="Event Photosdos-1" class="img-link"><img src="images/photoguide/event_item_do.png" alt="Event Photos Do's Screen Shot" class=""></a>
 						<ul>
@@ -921,7 +838,7 @@ selecting a focal point, the CMS will automate other sizes that the image will h
 							<li><p>Descriptive/representative of the event</p></li>
 						</ul>
 					</div>
-					<div class="right do break">
+					<div class="do break">
 						<h5>Do</h5>
 						<a href="images/photoguide/event_travel_do.png" data-lightbox="Event Photosdos-1" class="img-link"><img src="images/photoguide/event_travel_do.png" alt="Event Photos Do 2 Screen Shot" class=""></a>
 						<ul>

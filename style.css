@@ -1,14 +1,20 @@
 7/* Reset css, based on Eric Meyer's*/
 /* Make all the elements border-box, so that padding doesn't affect box size*/
 
+* {transition: all 0.25s ease;}
+
 *,html {
   box-sizing: border-box;
+  
 }
 *, *:before, *:after {
   box-sizing: border-box;
 }
 *:focus {
     outline: none;
+}
+*:hover {
+	
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,7 +75,7 @@ a.moth-logo {
 	height: 16px;
 	position: absolute;
 	left: 3em;
-	top: 11px;
+	top: 13px;
 }
 span.date {
 	position: absolute;
@@ -87,6 +93,7 @@ header.sub {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	height: 44px;
 	z-index: 99;
 }
 
@@ -116,7 +123,7 @@ header.sub {
 
 body {
 	font-size: 16px;
-	letter-spacing: .025em;
+	letter-spacing: .015em;
 	font-size: 13px;
 	font-family: "faktpro-blond", sans-serif;
 	color: #3e3e3f;
@@ -157,9 +164,9 @@ main {
 }
 section {
 	padding: 1em;
-	/*border-top: solid 1px #becad4;*/
 	margin: 2em 0 0;
-	width: 70%;
+	/*width: 70%;*/
+	max-width: 860px;
 }
 .home section,
 section.split,
@@ -176,18 +183,17 @@ div.split {
 a + div.split {
 	margin-top: 2em;
 }
-div.split div {
-	padding: 1em;
-	padding: 0 2em 2em;
-}
 .push-down {
 	margin-top: 3em;
 }
-.shaded{
+.split.shaded{
 	margin: 4em 0 0;
 	background: #fcfcfc;
-	padding: 2em 2em 1em;
-	background: #f3f3f3;
+	padding: 2em 2em 6em;
+	/*background: #f5f5f5;*/
+	background: #fff;
+	padding: 0;
+	max-width: 1100px;
 }
 
 
@@ -219,9 +225,10 @@ li ul {
 ol.contents {
 	list-style-type: decimal-leading-zero;
 	padding: 0 0 0 2em;
+	margin: 0 0 2em;
 	color: #345778;
-	font-size: 13px;
-	line-height: 15px;
+	font-size: 15px;
+	line-height: 17px;
 }
 ol.contents li {
 	padding: 0;
@@ -236,12 +243,8 @@ ol.contents ol {
 }
 
 .intro ul {
-	margin: 0 0 0 2em;
+	margin: 1em 0 0 2em;
 	list-style-type: disc;
-}
-
-.intro ul li {
-	margin: 0 0 1.5em;
 }
 
 
@@ -336,9 +339,15 @@ span.letter.purple {background: #223886;}
 aside.page-nav {
 	position: fixed;
 	/*right: 5%;*/
-	left: 80%;
-	top: 6%;
-	width: 310px;
+	/*left: 80%;
+	top: 6%;*/
+	width: 300px;
+	width: 100%;
+	background: #f5f5f5;
+	left: 76%;
+	top: 3%;
+	height: 100vh;
+	padding: 3em;
 }
 
 /* Force Lightbox images to be no wider than 1200px */
@@ -379,7 +388,6 @@ th {
 h1, h2, h3, h4, h5, h6 {
 	padding: 1em 0 .25em;
 	margin: 0 0 .5em;
-	letter-spacing: .025em;
 	line-height: 1.15em;
 }
 h1 { 
@@ -432,10 +440,15 @@ aside h4 a:before{
 	color: #ccc;
 	float: left;
 }
+aside span.letter {
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+}
 	
 h2 span { font-weight: 100; }
 h3 {
-	font-size: 160%;
+	font-size: 200%;
 	font-weight: 600;
 	letter-spacing: 0;
 	margin: 0; 
@@ -462,7 +475,7 @@ i, em {
 section h2 {
 	margin: 0;
 	padding: 0;
-	font-size: 240%;
+	font-size: 280%;
 	font-weight: 100;
 	line-height: 1.5em;
 }
@@ -492,7 +505,7 @@ div.shaded h6 {
     column-span: all;
 	text-transform: none;
 	letter-spacing: .045em;
-	padding: 1.2em 0 .8em 1em;
+	padding: 1.2em 0 .8em;
 	margin: 0;
 	font-size: 1.25em;
 	font-weight: 600;
@@ -512,7 +525,7 @@ small + small {
 	padding: 0 0 1em;
 }
 
-p, .intro p, .intro ul {
+p, .intro p, #photoguide .intro ul {
 	font-size: 1.25em;
 	line-height: 1.75em;
 	letter-spacing: 0.01em;
@@ -520,11 +533,9 @@ p, .intro p, .intro ul {
 .intro p {
 	margin: 0 0 1em;
 }
-section p {
-	max-width: 80%;
-	max-width: 700px;
-}
-.content-authoring img {
+.intro h4 {padding: 0; margin: 0;}
+
+.content-guide img {
 	margin: 0 0 1em;
 	max-width: 900px;
 }
@@ -541,6 +552,7 @@ section > div:last-child{
 
 section div img {
 	max-width: 900px;
+	margin-bottom: 1em;
 }
 
 section div p {
@@ -549,6 +561,7 @@ section div p {
 }
 section div div p {
 	font-size: 100%;
+	font-size: 112%;
 }
 
  section div a.img-link {
@@ -610,7 +623,7 @@ section div a.img-link:after  {
 		background: #0077d2;
 	}
 
-.do, .dont { padding: 0 0 0 1em; }
+
 .do h5, .dont h5 {
 	font-size: 24px;
 	font-weight: 500;
@@ -640,16 +653,17 @@ section div a.img-link:after  {
 	content:"\00D7";
 	color: #df286d;
 }
+
+.do a.img-link {
+	left: 1em;
+}
 .do a.img-link:after {
 	background: #6EBE44;
 	content:"\2713";
 	font-size: 18px;
 	padding-top: 4px;
 }
-/*
-.do a.img-link img { border: solid 2px #6EBE44; }
-.dont a.img-link img { border: solid 2px #df286d; }
-*/
+
 .dont a.img-link:after {
 	background: #df286d;
 	content:"\00D7";
@@ -679,6 +693,10 @@ a.button:hover {
 	color: #fff;
 }
 
+.lb-dataContainer {min-height: 44px;}
+.lb-data .lb-close {
+	margin: 0 0 1em;
+}
 
 /*///////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////// Media Queries ///////////////////////////*/
@@ -689,12 +707,16 @@ a.button:hover {
 	aside.page-nav {
 		position: static;
 		width: 100%;
+		height: auto;
 	}
 	h1 {max-width: 100%;}
 }
 
 @media (max-width: 430px) {
-	
+	.home section, section.split, div.split {
+		-webkit-column-count:1;
+		column-count:1;
+	}
 }
 
 @media (max-height: 920px) {
