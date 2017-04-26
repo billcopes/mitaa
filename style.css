@@ -1,11 +1,11 @@
 7/* Reset css, based on Eric Meyer's*/
 /* Make all the elements border-box, so that padding doesn't affect box size*/
 
-html {
+*,html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 *:focus {
     outline: none;
@@ -69,6 +69,7 @@ a.moth-logo {
 	height: 16px;
 	position: absolute;
 	left: 3em;
+	top: 11px;
 }
 span.date {
 	position: absolute;
@@ -83,7 +84,6 @@ header.sub {
 	font-weight: 100;
 	position: relative;
 	letter-spacing: .1em;
-	font-size: 14px;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -117,6 +117,7 @@ header.sub {
 body {
 	font-size: 16px;
 	letter-spacing: .025em;
+	font-size: 13px;
 	font-family: "faktpro-blond", sans-serif;
 	color: #3e3e3f;
 	margin: 0;
@@ -130,7 +131,7 @@ a {
 }
 
 a:hover {
-	/*text-decoration: underline;*/
+	text-decoration: underline;
 	color: #33a7ff;
 }
 
@@ -177,6 +178,7 @@ a + div.split {
 }
 div.split div {
 	padding: 1em;
+	padding: 0 2em 2em;
 }
 .push-down {
 	margin-top: 3em;
@@ -184,8 +186,8 @@ div.split div {
 .shaded{
 	margin: 4em 0 0;
 	background: #fcfcfc;
-	padding: 2em 1em 1em;
-	border: dashed 1px #ccc;
+	padding: 2em 2em 1em;
+	background: #f3f3f3;
 }
 
 
@@ -218,10 +220,19 @@ ol.contents {
 	list-style-type: decimal-leading-zero;
 	padding: 0 0 0 2em;
 	color: #345778;
+	font-size: 13px;
+	line-height: 15px;
+}
+ol.contents li {
+	padding: 0;
+	margin: 0;
 }
 
 ol.contents ol {
-	padding: .5em 0 0;
+	padding: 0;
+	margin: 0 0;
+	list-style-type: square;
+	color: #ccc;
 }
 
 .intro ul {
@@ -291,6 +302,7 @@ span.letter {
 	color: #fff;
 	font-weight: bold;
 	font-size: 16px;
+	font-size: 12px;
 	width: 24px;
 	height: 24px;
 	text-align: center;
@@ -323,7 +335,8 @@ span.letter.purple {background: #223886;}
 /*------------Page Nav------------*/
 aside.page-nav {
 	position: fixed;
-	right: 5%;
+	/*right: 5%;*/
+	left: 80%;
 	top: 6%;
 	width: 310px;
 }
@@ -392,24 +405,24 @@ h4 a:after {
 	margin: 0 0 0 .2em;
 	color: #ccc;
 }
-
-
-
 h2 a:hover:after,
 h3 a:hover:after,
 h4 a:hover:after {
 	color: #bbb;
 }
-
+aside section {
+	margin: 0;
+}
+aside a {
+	letter-spacing: 0;
+}
 aside p {
 	text-transform: uppercase;
 	letter-spacing: .2em;
 	font-size: .85em;
 	line-height: 2.75em;
 }
-	
-aside h3 {font-size: 1.25em;}
-
+aside h3 {font-size: 1.25em; padding: 0;}
 aside h4 a:after{content:"";}
 aside h4 a:before{
 	display: inline-block;
@@ -459,11 +472,20 @@ summary h4 {
 	margin: 0 0 .5em;
 	padding: 0;
 	font-size: 110%;
+	cursor: pointer;
 }
+
+summary h4:hover, details:hover h4 {color: #0077d2; text-decoration: underline;}
+	
 summary::-webkit-details-marker {
 	color: #0077d2;
+	color: #33a7ff;
 	font-size: 100%;
 }
+/*summary:hover::-webkit-details-marker {
+	color: #33a7ff;
+	color: #0077d2;
+}*/
 
 div.shaded h6 {
     -webkit-column-span: all;
@@ -491,14 +513,17 @@ small + small {
 }
 
 p, .intro p, .intro ul {
-	font-size: 20px;
+	font-size: 1.25em;
 	line-height: 1.75em;
 	letter-spacing: 0.01em;
 }
 .intro p {
 	margin: 0 0 1em;
 }
-section p { max-width: 80%; }
+section p {
+	max-width: 80%;
+	max-width: 700px;
+}
 .content-authoring img {
 	margin: 0 0 1em;
 	max-width: 900px;
@@ -513,6 +538,11 @@ section > div:last-child{
 	border: 0;
 	padding: 0;
 }
+
+section div img {
+	max-width: 900px;
+}
+
 section div p {
 	line-height: 1.5em;
 	margin: 0 0 2em;
@@ -552,7 +582,7 @@ section div ul li {
 	display: block;
 }
 
-section div a.img-link:hover {transform: scale(1.02);}
+/*section div a.img-link:hover {transform: scale(1.02);}*/
 
 section div a.img-link:after  {
 	  font-family: arial, sans-serif;
@@ -590,6 +620,7 @@ section div a.img-link:after  {
 .do ul li p, .dont ul li p {
 	position: relative;
 	padding-left: 24px;
+	margin: 0;
 }
 .do ul li:before,
 .dont ul li:before {
@@ -601,7 +632,7 @@ section div a.img-link:after  {
 	width: 16px;
 	height: 16px;
 	left: 0;
-	top: 4px;
+	top: 10px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -648,25 +679,6 @@ a.button:hover {
 	color: #fff;
 }
 
-/*///////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////// Temporary Elements //////////////////////*/
-/*///////////////////////////////////////////////////////////////////////*/
-
-.notes {
-	background: beige;
-	color: brown;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 100;
-	leading: 1em;
-	text-align: center;
-	
-}
-.notes p {font-size: 14px;}
-.notes p:before, .notes p:after {
-	content:" **** ";
-}
 
 /*///////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////// Media Queries ///////////////////////////*/
