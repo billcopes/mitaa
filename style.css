@@ -163,20 +163,45 @@ span.date {
     right: 3em;
     text-transform: uppercase;
 }
-header.sub {
-    text-align: center;
+nav { 
     background: #345778;
     color: #fff;
-    padding: 1em;
+    padding: 0;
     font-weight: 100;
+	font-size: 13px;
     position: relative;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     position: fixed;
     top: 0;
     width: 100%;
     height: 44px;
     z-index: 99;
+	text-align: center;
+	text-transform: uppercase;
 }
+nav ul {margin: 0;}
+nav li {
+	margin: 0;
+	display: inline-block;
+}
+nav ul a {
+	color: #ddd;
+	padding: 0 0 .8em;
+	margin: 1.3em;
+	display: block;
+}
+nav ul a:hover {
+	text-decoration: none;
+	color: #fff;
+	
+}
+
+nav ul a.current {
+	border-bottom: solid 4px #33a7ff;
+	color: #fff;
+}
+
+	
 /*///////////////////////////////////////////////////////////////////////*/
 /*//////////////////////// Body Part Styles /////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////*/
@@ -196,9 +221,8 @@ header.sub {
     font-style: normal;
 }
 body {
-    font-size: 16px;
     letter-spacing: .015em;
-    font-size: 13px;
+    font-size: 16px;
     font-family: "faktpro-blond", sans-serif;
     color: #3e3e3f;
     margin: 0;
@@ -346,28 +370,10 @@ ul.examples img {
 	display: block;
 }
 
-
-/*
-ul.examples li {
-    float: left;
-    max-width: 230px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    line-height: 0;
-    border: solid 1px #fff;
-    transition: all .2s ease-in-out;
+.content-guide section ul{
+	list-style-type: disc;
+	margin: 0 0 0 1.8em;
 }
-ul.examples li:hover {
-    transform: scale(1.1);
-}
-ul.examples:after {
-    content: "";
-    display: block;
-    clear: both;
-}*/
-/*/ Status Tags */
 
 .need:before,
 .new:before,
@@ -603,7 +609,6 @@ em {
 section h2 {
     margin: 0;
     padding: 0;
-    font-size: 280%;
     font-weight: 100;
     line-height: 1.5em;
 }
@@ -611,12 +616,14 @@ summary h4 {
     display: inline-block;
     margin: 0 0 .5em;
     padding: 0;
-    font-size: 110%;
+    font-size: 100%;
     cursor: pointer;
+	color: #0077d2;
 }
 summary h4:hover,
 details:hover h4 {
     color: #0077d2;
+	color: #33a7ff;
     text-decoration: underline;
 }
 summary::-webkit-details-marker {
@@ -651,13 +658,6 @@ small {
 small + small {
     padding: 0 0 1em;
 }
-p,
-.intro p,
-#photoguide .intro ul {
-    font-size: 1.25em;
-    line-height: 1.75em;
-    letter-spacing: 0.01em;
-}
 .intro p {
     margin: 0 0 1em;
 }
@@ -685,13 +685,11 @@ section div img {
     max-width: 900px;
     margin-bottom: 1em;
 }
+
+p { line-height: 1.5em; }
+
 section div p {
-    line-height: 1.5em;
     margin: 0 0 2em;
-}
-section div div p {
-    font-size: 100%;
-    font-size: 112%;
 }
 section div a.img-link {
     position: relative;
@@ -848,6 +846,11 @@ a.button:hover {
         max-width: 100%;
     }
 }
+@media (max-width: 600px) {
+	a.moth-logo {display: none;}
+}
+
+
 @media (max-width: 430px) {
     .home section,
     section.split,
@@ -855,6 +858,12 @@ a.button:hover {
         -webkit-column-count: 1;
         column-count: 1;
     }
+	nav ul a {
+		margin: 1.8em .5em;
+		font-size: 11px;
+	}
+	header {padding: 1em 0;}
+	header h1 {font-size: 200%;}
 }
 @media (max-height: 920px) {
     aside.page-nav.guidelines {
@@ -876,7 +885,7 @@ a.button:hover {
     
     .page-nav,
     .notes,
-    header.sub,
+    nav,
     section div a.img-link:after {
         display: none;
     }
